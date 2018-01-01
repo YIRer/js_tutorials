@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/boot.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var earth={
+        isRound : true,
+        numberFromSun:3
+    };
+    describe("Earth",function(){
+        it("is  rounde",function(){
+            expect(earth.isRound).toBe(true);
+        });
+        it("is the third planet from the sun",function(){
+            expect(earth.numberFromSun).toBe(3);
+        });
+    })
+</script>
+</html>

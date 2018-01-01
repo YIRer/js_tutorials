@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function doubleValues(arr){
+        var newArr = arr.map(function(item){
+            return item * 2;
+        });
+        // console.log(newArr);
+        return newArr;
+    }
+    console.log(doubleValues([1,2,3]));
+    function valTimesIndex(arr){
+        var newArr = arr.map(function(item,index){
+            return item * index;
+        });
+        // console.log(newArr);
+        return newArr;
+    }
+    console.log(valTimesIndex([1,2,3]));
+    function extractKey(arr, key){
+        var newArr = arr.map(function(item){
+            return item[key]
+        });
+        // console.log(newArr);
+        return newArr;
+    }
+    console.log(extractKey([{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}], 'name'));
+    function extractFullName(arr, key){
+        var newArr = arr.map(function(item){
+            return item.first +' '+item.last;
+        });
+        // console.log(newArr);
+        return newArr;
+    }
+    console.log(extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}]));
+</script>
+</html>

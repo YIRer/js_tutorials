@@ -1,0 +1,42 @@
+body{
+    display:flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+header{
+    display: flex;
+    /* height: 800px; */
+    justify-content:space-between;
+}
+main{
+    display: flex;
+    flex-basis: 600px;
+}
+nav{
+    flex: 1 1 20%;
+}
+article{
+    flex: 4 0 60%;
+    order:1;
+}
+aside{
+    flex: 1 1 20%;
+    order:2;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width:600px){
+    main{
+        flex-direction: column;
+        flex-grow:1;
+    }
+    article{
+        order:0;
+    }
+}

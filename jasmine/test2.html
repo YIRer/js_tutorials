@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.8.0/boot.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    describe("jasmine matchers",function(){
+        it("allows for === and deep equality",function(){
+           expect(1+1).toBe(2);
+           expect([1,2,3]).toEqual([1,2,3]); 
+        });
+        it("allows for easy precision cheking",function(){
+           expect(3.1415).toBeCloseTo(3.14,2);
+        });
+        it("allows for easy truthy/falsey checking",function(){
+           expect(0).toBeFalsy();
+           expect([]).toBeTruthy();
+        });
+        it("allows for easy type checking",function(){
+           expect([]).toEqual(jasmine.any(Array));
+           expect([]).toEqual(jasmine.any(Object));
+           expect(function(){}).toEqual(jasmine.any(Function));
+        });
+        it("allows for checking contents of an object",function(){
+           expect([1,2,3]).toContain(1);
+           expect({name:'Elie',job:'Instructor'}).toEqual(jasmine.objectContaining({name:'Elie'}));
+        });
+
+    });
+</script>
+</html>

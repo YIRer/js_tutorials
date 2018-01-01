@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="svg.css">
+    <title>Document</title>
+</head>
+<body>
+    <svg>
+        <rect x="0" y="0" width="800" height="150" fill="rgb(55, 135, 155)" />
+        <rect x="0" y="150" width="800" height="150" fill="yellow" />
+        <rect x="0" y="300" width="800" height="150" fill="rgb(55, 135, 155)" />
+        <path stroke="black" d="M0,0 L300,225 0,450 z" />
+    </svg>
+    <svg>
+        <rect fill="yellow" width="800" height="450" x="0" y='0'/>
+        <path d="M0,50 L300,225 0,400 z" />
+        <path d="M800,50 L500,225 800,400 z" />
+        <path fill="green" d="M50,0 L400,200 750,0 z" />
+        <path fill="green" d="M50,450 L400,250 750,450 z" />
+    </svg>
+    <svg>
+        <rect fill="red" width="800" height="450" x="0" y='0'/>
+        <g fill="yellow">
+            <path d="M0,0 L150,0 400,220 400,225 z"/>
+            <path d="M350,0 L450,0 400,225 350,0 z"/>
+            <path d="M800,0 L650,0 400,220 400,225 z"/>
+            <path d="M800,450 L650,450 400,220 400,225 z"/>
+            <path d="M450,450 L350,450 400,220 400,225 z"/>
+            <path d="M0,450 L150,450 400,220 400,225 z"/>
+            <path d="M0,175 L0,275 400,220 400,225 z"/>
+            <path d="M800,175 L800,275 400,220 400,225 z"/>
+        </g>
+        <circle cx="400" cy="225" r="50" fill="yellow" stroke="red" stroke-width="10" />
+    </svg>
+    <svg>
+        <g stroke="black" stroke-width="15" transform="translate(300,200)">
+            <path d="M-200 -50v100m25 0v-100m25 0v100
+                    M140-50v45m0 10v45m25 0v-45m0 -10v-45m25 0v45m0 10v45" 
+                transform="rotate(30)"/>
+            <path d="M-200 -50v100m25 0v-45m0-10v-45m25 0v100
+                    M140-50v45m0 10v45m25 0v-100m25 0v45m0 10v45" 
+                transform="rotate(-30)"/>
+        </g>
+        <circle cx="300" cy="200" fill="#cd2e3a" r="90"/>
+        <path fill="#0047a0" d="M300 200a45 45 0 0 1 78 45A90 90 0 1 1 300 110"/>
+        <path fill="#cd2e3a" d="M300 200a45 45 0 0 1 -78 -45A90 90 0 0 1 300 110"
+    </svg>
+</body>
+<script src="svg.js"></script>
+</html>

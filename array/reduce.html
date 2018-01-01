@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var extractValueArr = [{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}]
+    function extractValue(arr, key){
+        var result = arr.reduce(function(ac,next){
+            ac.push(next[key]);
+            return ac;
+        },[])
+        // console.log(result);
+        return result;
+    }
+    console.log(extractValue(extractValueArr,'name'));
+
+    function vowelCount(str){
+        var aeiou = "aeiou";
+        return str.toLowerCase().split("").reduce(function(acc,next){
+            if(aeiou.indexOf(next)>-1){
+                if(acc[next]){
+                    acc[next]++
+                }else{
+                    acc[next] = 1;
+                }
+            }
+            return acc;
+        },{})
+    }
+    console.log(vowelCount('ssss'));
+    var addKeyAndValueArr = [{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}];
+    function addKeyAndValue(arr, key, value){
+        return arr.reduce(function(acc,next,idx){
+            acc[idx][key] = value
+            return acc;
+            // return acc[next][key] = value
+        },arr)
+    }
+    console.log(addKeyAndValue(addKeyAndValueArr, 'title', 'Instructor'));
+    function isEven(val){
+        return val % 2 === 0;
+    }
+    var arr = [1,2,3,4,5,6,7,8];
+    function partition(arr, callback){
+        return arr.reduce(function(acc,next){
+            if(callback(next)){
+                acc[0].push(next);
+            }else{
+                acc[1].push(next);
+            }
+            return acc;
+        },[[],[]])
+    }
+    console.log(partition(arr, isEven));
+</script>
+</html>
